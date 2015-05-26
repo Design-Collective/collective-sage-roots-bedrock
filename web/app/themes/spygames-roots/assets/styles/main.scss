@@ -1,0 +1,23 @@
+@import "common/_mixins";
+@import "_variables";
+
+// bower:scss
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss";
+// endbower
+
+// Components
+
+@import "../../bower_components/Responsive-Alignment-for-Bootstrap/scss/responsive-alignment";	// Responsive Align Classes
+@import "components/_bootstrap-select";     // Bootstrap dropdown select
+@import "components/_slick";                // Slick carousel
+
+@import "common/_global";           		// Global styles
+
+// Layouts
+
+// @import "layouts/_header";           // Header styling
+// @import "layouts/_sidebar";          // Sidebar styling
+// @import "layouts/_footer";           // Footer styling
+// @import "layouts/_pages";            // Page styling
+// @import "layouts/_posts";            // Post styling 

@@ -1,0 +1,54 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*
+!web/app/mu-plugins/.gitkeep
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/mu-plugins/disallow-indexing.php
+!web/app/mu-plugins/register-theme-directory.php
+!web/app/mu-plugins/bedrock-autoloader.php
+
+
+# WordPress
+web/wp
+web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
+
+#Plugin Keep
+!web/app/plugins/awesome-builder
+!web/app/plugins/advanced-custom-fields-pro
+!web/app/plugins/woocommerce-composite-products
+!web/app/plugins/woocommerce-composite-products
+!web/app/plugins/woocommerce-tm-extra-product-options
+!web/app/plugins/woocommerce_product_configurator
+!web/app/plugins/woocommerce-gateway-authorize-net-cim
+!web/app/plugins/woocommerce-shipping-fedex
+
+#MU-Plugin Keep
+
+web/app/themes/muvbaby-roots/assets/css/main.css.map
+web/app/themes/muvbaby-roots/assets/css/main.min.css.map
+
+#FTP
+sftp-config.json
