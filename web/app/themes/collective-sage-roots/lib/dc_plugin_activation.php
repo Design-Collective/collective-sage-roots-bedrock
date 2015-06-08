@@ -77,6 +77,29 @@ function my_theme_register_required_plugins() {
             'slug'      => 'safe-redirect-manager',
             'required'  => false,
         ),
+        array(
+            'name'      => 'JSON Rest API',
+            'slug'      => 'json-rest-api',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Mailchimp for WP',
+            'slug'      => 'mailchimp-for-wp',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Regenerate Thumbnails',
+            'slug'      => 'regenerate-thumbnails',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'WP Mail SMTP',
+            'slug'      => 'regenerate-thumbnails',
+            'required'  => false,
+        ),
+
+        #!web/app/plugins/wp-clone-by-wp-academy
+
         /*
         
         // This is an example of how to include a plugin pre-packaged with a theme.
