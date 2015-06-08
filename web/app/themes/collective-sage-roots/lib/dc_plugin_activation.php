@@ -46,6 +46,39 @@ function my_theme_register_required_plugins() {
      */
     $plugins = array(
 
+        // This is an example of how to include a plugin from the WordPress Plugin Repository.
+        array(
+            'name'      => 'ACF to WP API',
+            'slug'      => 'acf-to-wp-api',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Clone Posts',
+            'slug'      => 'clone-posts',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Contact Form 7',
+            'slug'      => 'contact-form-7',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'WP Clone',
+            'slug'      => 'wp-clone-by-wp-academy',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Soil',
+            'slug'      => 'soil',
+            'required'  => false,
+        ),
+        array(
+            'name'      => 'Safe Redirect Manager',
+            'slug'      => 'safe-redirect-manager',
+            'required'  => false,
+        ),
+        /*
+        
         // This is an example of how to include a plugin pre-packaged with a theme.
         array(
             'name'               => 'TGM Example Plugin', // The plugin name.
@@ -66,14 +99,7 @@ function my_theme_register_required_plugins() {
             'required'           => true, // If false, the plugin is only 'recommended' instead of required.
             'external_url'       => 'https://github.com/thomasgriffin/New-Media-Image-Uploader', // If set, overrides default API URL and points to an external URL.
         ),
-
-        // This is an example of how to include a plugin from the WordPress Plugin Repository.
-        array(
-            'name'      => 'BuddyPress',
-            'slug'      => 'buddypress',
-            'required'  => false,
-        ),
-
+        */
     );
 
     /**

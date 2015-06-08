@@ -36,14 +36,18 @@ bin
 .vagrant
 
 #Plugin Keep
-!web/app/plugins/advanced-custom-fields-pro
-!web/app/plugins/woocommerce_product_configurator
-!web/app/plugins/acf-to-wp-api
-!web/app/plugins/clone-posts
-!web/app/plugins/contact-form-7
-!web/app/plugins/debug-bar
-!web/app/plugins/json-rest-api
-!web/app/plugins/mailchimp-for-wp
+#!web/app/plugins/advanced-custom-fields-pro
+#!web/app/plugins/acf-to-wp-api
+#!web/app/plugins/clone-posts
+#!web/app/plugins/contact-form-7
+#!web/app/plugins/debug-bar
+#!web/app/plugins/json-rest-api
+#!web/app/plugins/mailchimp-for-wp
+#!web/app/plugins/regenerate-thumbnails
+#!web/app/plugins/safe-redirect-manager
+#!web/app/plugins/soil
+#!web/app/plugins/wp-clone-by-wp-academy
+#!web/app/plugins/wp-mail-smtp
 
 #MU-Plugin Keep
 
