@@ -36,14 +36,14 @@ bin
 .vagrant
 
 #Plugin Keep
-!web/app/plugins/awesome-builder
 !web/app/plugins/advanced-custom-fields-pro
-!web/app/plugins/woocommerce-composite-products
-!web/app/plugins/woocommerce-composite-products
-!web/app/plugins/woocommerce-tm-extra-product-options
 !web/app/plugins/woocommerce_product_configurator
-!web/app/plugins/woocommerce-gateway-authorize-net-cim
-!web/app/plugins/woocommerce-shipping-fedex
+!web/app/plugins/acf-to-wp-api
+!web/app/plugins/clone-posts
+!web/app/plugins/contact-form-7
+!web/app/plugins/debug-bar
+!web/app/plugins/json-rest-api
+!web/app/plugins/mailchimp-for-wp
 
 #MU-Plugin Keep
 

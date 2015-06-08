@@ -18,6 +18,10 @@ $sage_includes = [
   'lib/assets.php',                // Scripts and stylesheets
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
+  'lib/dc_config.php',             // DC Init and Configs
+  'lib/dc_acf.php',                // DC ACF
+  'lib/dc_plugin_activation.php',  // DC Required Plugin Activation
+
 ];
 
 foreach ($sage_includes as $file) {

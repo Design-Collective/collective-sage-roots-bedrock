@@ -52,7 +52,7 @@ include_once( get_stylesheet_directory() . '/acf/acf.php' );
 //
 
 
-/*
+
 
 if(function_exists('acf_add_options_page')) { 
 
@@ -78,6 +78,7 @@ if(function_exists('acf_add_options_page')) {
 
 }
 
+/*
 For more information:
 http://www.advancedcustomfields.com/resources/register-multiple-options-pages/
 
@@ -90,7 +91,7 @@ http://www.advancedcustomfields.com/resources/register-multiple-options-pages/
 //
 
 
-if( function_exists('register_field_group') ) {
+if( function_exists('register_field_group') ):
 
   /* 
 
@@ -189,4 +190,4 @@ if( function_exists('register_field_group') ) {
   ));
 
 
-}
+endif;
