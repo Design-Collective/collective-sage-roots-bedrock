@@ -63,11 +63,6 @@ function my_theme_register_required_plugins() {
             'required'  => false,
         ),
         array(
-            'name'      => 'WP Clone',
-            'slug'      => 'wp-clone-by-wp-academy',
-            'required'  => false,
-        ),
-        array(
             'name'      => 'Soil',
             'slug'      => 'soil',
             'required'  => false,
