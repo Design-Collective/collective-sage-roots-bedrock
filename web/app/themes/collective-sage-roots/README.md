@@ -1,44 +1,15 @@
-# [Sage](https://roots.io/sage/) Fork Starter Project
+# [Sage](https://roots.io/sage/)
+[![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
 
-## To-do
+Sage is a WordPress starter theme based on HTML5 Boilerplate, gulp, Bower, and Bootstrap Sass, that will help you make better themes.
 
-* Include Bootstrap-Select as .js dependency into assets/manifest.json
-* Include Slick.js as .js build dependency into assets/manifest.json
-* Create hero unit slide template (using Slick.js)
-
-## Developer Quick Start
-
-### Theme Setup
-
-1. If you have not yet done so, setup a [Design-Collective/DCWP](https://github.com/Design-Collective/dcwp) project and remote repo.
-2. Install this starter theme:
-  * Go to your project's folder `cd myproject`
-  * Go to the themes folder: `cd web/app/themes`
-  * Clone this starter theme:
-    `curl https://github.com/Design-Collective/sage mytheme`
-3. Setup versioning of theme folder within main repo:
-  * Go to the theme's folder: `cd mytheme`
-  * Remove the `.git` folder from the theme: `rm -rf .git`
-  * Add the entire theme folder to your repository: `git add .`
-4. Set theme name and screenshot:
-  * Update the theme name and information in the `style.css`
-  * Update the `screenshot.png` file (880px x 660px)
-5. Commit your changes: `git commit -am "Added theme"`
-6. Push your local repo to the remote repository: `git push origin master`
-
-### Install local dependecies
-
-  * Run `npm install`
-  * Run `bower install`
-
-See [Theme development](#theme-development) for more information
-
-### Install local dependecies
-
-Develop your theme with `gulp watch`.
-Build with `gulp build`
-
+* Source: [https://github.com/roots/sage](https://github.com/roots/sage)
+* Homepage: [https://roots.io/sage/](https://roots.io/sage/)
+* Documentation: [https://roots.io/sage/docs/](https://roots.io/sage/docs/)
+* Twitter: [@rootswp](https://twitter.com/rootswp), [@retlehs](https://twitter.com/retlehs), [@swalkinshaw](https://twitter.com/swalkinshaw), [@Foxaii](https://twitter.com/Foxaii), [@c2foryou](https://twitter.com/c2foryou), [@austinpray](https://twitter.com/austinpray)
+* Newsletter: [Subscribe](http://roots.io/subscribe/)
+* Forum: [https://discourse.roots.io/](https://discourse.roots.io/)
 
 ## Requirements
 
@@ -53,35 +24,34 @@ For more installation notes, refer to the [Install gulp and Bower](#install-gulp
 
 ## Features
 
-Custom features:
-* [Responsive-Alignment-for-Bootstrap](https://github.com/calebzahnd/Responsive-Alignment-for-Bootstrap) Responsive align classes for Bootstrap
-* [Advanced Custom Fields](http://www.advancedcustomfields.com/resources) (Plugin)
-* [Bootstrap-Sass-Official](http://badge.fury.io/bo/bootstrap-sass) (Bower)
-* [Bourbon](https://github.com/thoughtbot/bourbon) (Bower) Slim awesome bunch of mixins. For documentation, see [http://bourbon.io/docs/](http://bourbon.io/docs/)
-* [Slick](https://github.com/kenwheeler/slick/) (Bower) JS slider
-* [Bootstrap-Select](https://github.com/silviomoreto/bootstrap-select) (Bower)
-
-Features inherited from Sage:
-* [gulp](http://gulpjs.com/) build script that compiles both Less and Sass, checks for JavaScript errors, optimizes images, and concatenates and minifies files
+* [gulp](http://gulpjs.com/) build script that compiles both Sass and Less, checks for JavaScript errors, optimizes images, and concatenates and minifies files
 * [BrowserSync](http://www.browsersync.io/) for keeping multiple browsers and devices synchronized while testing, along with injecting updated CSS and JS into your browser while you're developing
 * [Bower](http://bower.io/) for front-end package management
 * [asset-builder](https://github.com/austinpray/asset-builder) for the JSON file based asset pipeline
-* [Bootstrap](http://getbootstrap.com/)
+* [Sass](https://github.com/twbs/bootstrap-sass) [Bootstrap](http://getbootstrap.com/)
 * [Theme wrapper](https://roots.io/sage/docs/theme-wrapper/)
-* [HTML5 Boilerplate](http://html5boilerplate.com/)
-  * The latest [jQuery](http://jquery.com/) via Google CDN, with a local fallback
-  * The latest [Modernizr](http://modernizr.com/) build for feature detection
 * ARIA roles and microformats
-* Cleaner HTML output of navigation menus
 * Posts use the [hNews](http://microformats.org/wiki/hnews) microformat
 * [Multilingual ready](https://roots.io/wpml/) and over 30 available [community translations](https://github.com/roots/sage-translations)
 
-## Important files
+Install the [Soil](https://github.com/roots/soil) plugin to enable additional features:
 
-* `assets/styles/_variables.scss` Main bootstrap / theme SCSS variables
-* `assets/mainfest.json` Use with Manifest Builder
-* `functions.php` To add your own PHP script file (under `/lib`)
+* Cleaner output of `wp_head` and enqueued assets
+* Cleaner HTML output of navigation menus
+* Root relative URLs
+* Nice search (`/search/query/`)
+* Google CDN jQuery snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
+* Google Analytics snippet from [HTML5 Boilerplate](http://html5boilerplate.com/)
 
+## Installation
+
+Clone the git repo - `git clone https://github.com/roots/sage.git` and then rename the directory to the name of your theme or website.
+
+If you don't use [Bedrock](https://github.com/roots/bedrock), you'll need to add the following to your `wp-config.php` on your development installation:
+
+```php
+define('WP_ENV', 'development');
+```
 
 ## Configuration
 
@@ -123,7 +93,7 @@ For example, if your local development URL is `http://project-name.dev` you woul
   }
 ...
 ```
-If your local develoment URL looks like `http://localhost:8888/project-name/` you would update the file to read:
+If your local development URL looks like `http://localhost:8888/project-name/` you would update the file to read:
 ```json
 ...
   "config": {
@@ -136,13 +106,15 @@ If your local develoment URL looks like `http://localhost:8888/project-name/` yo
 
 Sage documentation is available at [https://roots.io/sage/docs/](https://roots.io/sage/docs/).
 
-## Updates to starter theme (core only)
+## Contributing
 
-If you plan to merge/update this repo from [Roots/Sage](https://roots.io/sage/), you will need to setup the `upstream` remote in order to merge/update from upstream.
+Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
 
-Run the following commands:
-  * `git remote add upstream https://github.com/roots/sage`
-  * `git fetch upstream`
-  Commits to the remote master will be stored in a local branch, upstream/master.
-  * Checkout local master branch: `git checkout master`
-  * Merge upstream/master branch to sync with upstream: `git merge upstream/master`
+## Community
+
+Keep track of development and community news.
+
+* Participate on the [Roots Discourse](https://discourse.roots.io/)
+* Follow [@rootswp on Twitter](https://twitter.com/rootswp)
+* Read and subscribe to the [Roots Blog](https://roots.io/blog/)
+* Subscribe to the [Roots Newsletter](https://roots.io/subscribe/)
