@@ -52,12 +52,48 @@ function sage_wrap_base_cpts($templates) {
   return $templates; // Return our modified array with base-$cpt.php at the front of the queue
 }
 
+// Do Front Page Instead of Regular Posts
+
+// - Create a Front Page
+if (isset($_GET['activated']) && is_admin()){
+
+  $new_page_title = 'Home';
+  $new_page_content = 'Hello - this is your new Homepage!';
+
+  //don't change the code bellow, unless you know what you're doing
+
+  $page_check = get_page_by_title($new_page_title);
+  $new_page = array(
+    'post_type' => 'page',
+    'post_title' => $new_page_title,
+    'post_content' => $new_page_content,
+    'post_status' => 'publish',
+    'post_author' => 1,
+  );
+  if(!isset($page_check->ID)){
+    $new_page_id = wp_insert_post($new_page);
+    if(!empty($new_page_template)){
+            update_post_meta($new_page_id, '_wp_page_template', $new_page_template);
+    }
+  }
+  // Set the Front Page Programatically
+  add_action( 'after_setup_theme', 'change_theme_frontpage' );
+
+  function change_theme_frontpage() {
+    // Use a static front page
+    $home = get_page_by_title( 'home' );
+    update_option( 'page_on_front', $home->ID );
+    update_option( 'show_on_front', 'page' );
+  }
+}
+
+
 // Hide Admin Bar
 // if(is_home()) {
   add_filter('show_admin_bar', '__return_false');
 // }
 
-  // Disable support for comments and trackbacks in post types
+// Disable support for comments and trackbacks in post types
 function df_disable_comments_post_types_support() {
   $post_types = get_post_types();
   foreach ($post_types as $post_type) {
