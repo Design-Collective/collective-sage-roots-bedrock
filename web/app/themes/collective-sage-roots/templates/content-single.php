@@ -1,3 +1,4 @@
+
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header class="page-header">
@@ -13,3 +14,4 @@
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
+
