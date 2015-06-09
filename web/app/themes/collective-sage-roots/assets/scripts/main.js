@@ -18,6 +18,7 @@
     // All pages
     'common': {
       init: function() {
+        initSlick();
         // JavaScript to be fired on all pages
       },
       finalize: function() {
@@ -73,5 +74,44 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+
+
+  // Slick carousel init
+  function initSlick() {
+
+    if($(".slider").length) {
+      $(".slider .carousel-inner").slick({
+        dots: true,
+        //dotsClass: 'carousel-indicators',
+        appendDots: $('.carousel-inner'),
+        fade: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        lazyLoad: 'progressive',
+        speed: 1500,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        pauseOnHover: false
+      });
+      // On swipe event
+      $('.slider').on('swipe', function(event, slick, direction){
+        console.log(direction);
+        // left
+      });
+
+      // On edge hit
+      $('.slider').on('edge', function(event, slick, direction){
+        console.log('edge was hit');
+      });
+
+      // On before slide change
+      $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        console.log(nextSlide);
+      });
+    }
+
+  }
+
 
 })(jQuery); // Fully reference jQuery after this point.
