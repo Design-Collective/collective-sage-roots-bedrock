@@ -3,7 +3,7 @@
 /* DC Config Functions */
 
 /*
-Create Custom Post type for Projects
+Create Custom Post type
 NOTE: If your CPT is named movie:
 archive pages will attempt to load templates/content-movie.php
 single posts will attempt to load templates/content-single-movie.php
@@ -31,7 +31,7 @@ function init_project_post_type() {
             'author',
             'page-attributes'),
       'rewrite'  => array( 'slug' => 'project' ),
-      'menu_icon'   => 'dashicons-video-alt',
+      //'menu_icon'   => 'dashicons-video-alt',
     )
   );
   flush_rewrite_rules();
@@ -59,6 +59,7 @@ if (isset($_GET['activated']) && is_admin()){
 
   $new_page_title = 'Home';
   $new_page_content = 'Hello - this is your new Homepage!';
+  $new_page_template = 'template-home.php'; //ex. template-custom.php. Leave blank if you don't want a custom page template.
 
   //don't change the code bellow, unless you know what you're doing
 
@@ -69,11 +70,12 @@ if (isset($_GET['activated']) && is_admin()){
     'post_content' => $new_page_content,
     'post_status' => 'publish',
     'post_author' => 1,
+
   );
   if(!isset($page_check->ID)){
     $new_page_id = wp_insert_post($new_page);
     if(!empty($new_page_template)){
-            update_post_meta($new_page_id, '_wp_page_template', $new_page_template);
+        update_post_meta($new_page_id, '_wp_page_template', $new_page_template);
     }
   }
   // Set the Front Page Programatically
