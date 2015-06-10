@@ -18,6 +18,9 @@
         "styles/editor-style.less"
       ]
     },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
     "modernizr.js": {
       "bower": ["modernizr"]
     }

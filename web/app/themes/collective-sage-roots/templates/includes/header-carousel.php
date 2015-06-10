@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel slider">
+<div id="slider" class="carousel slider">
   <!-- Indicators -->
   
   <div class="carousel-inner">

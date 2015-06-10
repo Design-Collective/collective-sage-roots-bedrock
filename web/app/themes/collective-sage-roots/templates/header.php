@@ -9,8 +9,12 @@
 
           <!-- Logo
           ============================================= -->
+
           <div id="logo">
-              <a class="navbar-brand text-hide" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+
+              <a class="text-hide standard-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
+
+              <a class="text-hide retina-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
           </div><!-- #logo end -->
 
           <!-- Primary Navigation
@@ -50,9 +54,7 @@
                       </div>
                       <div class="top-cart-items">
                           <div class="top-cart-item clearfix">
-                              <div class="top-cart-item-image">
-                                  <a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt"></a>
-                              </div>
+
                               <div class="top-cart-item-desc">
                                   <a href="#">Blue Round-Neck Tshirt</a>
                                   <span class="top-cart-item-price">$19.99</span>
@@ -60,9 +62,7 @@
                               </div>
                           </div>
                           <div class="top-cart-item clearfix">
-                              <div class="top-cart-item-image">
-                                  <a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress"></a>
-                              </div>
+
                               <div class="top-cart-item-desc">
                                   <a href="#">Light Blue Denim Dress</a>
                                   <span class="top-cart-item-price">$24.99</span>

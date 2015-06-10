@@ -5,8 +5,8 @@ use Roots\Sage\Wrapper;
 
 ?>
 
-<!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
   <?php get_template_part('templates/head'); ?>
   <body <?php body_class('stretched no-transtion'); ?> data-loader="1">
     <div id="wrapper" class="clearfix">

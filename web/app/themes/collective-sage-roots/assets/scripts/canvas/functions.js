@@ -10,6 +10,30 @@ $.fn.doOnce = function( func ) {
 	return this;
 }
 
+(function() {
+	var lastTime = 0;
+	var vendors = ['ms', 'moz', 'webkit', 'o'];
+	for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+		window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+		window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
+									|| window[vendors[x]+'CancelRequestAnimationFrame'];
+	}
+
+	if (!window.requestAnimationFrame)
+		window.requestAnimationFrame = function(callback, element) {
+			var currTime = new Date().getTime();
+			var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+			var id = window.setTimeout(function() { callback(currTime + timeToCall); },
+			  timeToCall);
+			lastTime = currTime + timeToCall;
+			return id;
+		};
+
+	if (!window.cancelAnimationFrame)
+		window.cancelAnimationFrame = function(id) {
+			clearTimeout(id);
+		};
+}());
 
 
 
@@ -24,10 +48,18 @@ var SEMICOLON = SEMICOLON || {};
 
 		init: function(){
 
-
-
+			SEMICOLON.initialize.responsiveClasses();
+			SEMICOLON.initialize.imagePreload( '.portfolio-item:not(:has(.fslider)) img' );
+			SEMICOLON.initialize.stickyElements();
+			SEMICOLON.initialize.goToTop();
+			SEMICOLON.initialize.fullScreen();
+			SEMICOLON.initialize.verticalMiddle();
+			SEMICOLON.initialize.lightbox();
+			SEMICOLON.initialize.resizeVideos();
+			SEMICOLON.initialize.imageFade();
 			SEMICOLON.initialize.pageTransition();
-
+			SEMICOLON.initialize.dataStyles();
+			SEMICOLON.initialize.dataResponsiveHeights();
 
 			$('.fslider').addClass('preloader2');
 
@@ -395,14 +427,15 @@ var SEMICOLON = SEMICOLON || {};
 				} else if( loaderStyle == '6' ) {
 					loaderStyleHtml = '<div class="css3-spinner-scaler"></div>';
 				}
-        console.log('animsition does its job');
-        console.log($body.attr('class'));
+
 				$wrapper.animsition({
 					inClass : animationIn,
 					outClass : animationOut,
 					inDuration : Number(durationIn),
 					outDuration : Number(durationOut),
+					linkElement : '#primary-menu ul li a:not([target="_blank"]):not([href^=#])',
 					loading : true,
+					loadingParentElement : 'body',
 					loadingClass : 'css3-spinner',
 					loadingHtml : loaderStyleHtml,
 					unSupportCss : [
@@ -692,7 +725,18 @@ var SEMICOLON = SEMICOLON || {};
 
 		init: function(){
 
-
+			SEMICOLON.header.superfish();
+			SEMICOLON.header.menufunctions();
+			SEMICOLON.header.fullWidthMenu();
+			SEMICOLON.header.overlayMenu();
+			SEMICOLON.header.stickyMenu();
+			SEMICOLON.header.sideHeader();
+			SEMICOLON.header.sidePanel();
+			SEMICOLON.header.onePageScroll();
+			SEMICOLON.header.onepageScroller();
+			SEMICOLON.header.darkLogo();
+			SEMICOLON.header.topsearch();
+			SEMICOLON.header.topcart();
 
 		},
 
@@ -1328,7 +1372,22 @@ var SEMICOLON = SEMICOLON || {};
 
 		init: function(){
 
-
+			SEMICOLON.widget.animations();
+			SEMICOLON.widget.youtubeBgVideo();
+			SEMICOLON.widget.tabs();
+			SEMICOLON.widget.tabsJustify();
+			SEMICOLON.widget.toggles();
+			SEMICOLON.widget.accordions();
+			SEMICOLON.widget.counter();
+			SEMICOLON.widget.roundedSkill();
+			SEMICOLON.widget.progress();
+			SEMICOLON.widget.flickrFeed();
+			SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
+			SEMICOLON.widget.dribbbleShots();
+			SEMICOLON.widget.navTree();
+			SEMICOLON.widget.textRotater();
+			SEMICOLON.widget.linkScroll();
+			SEMICOLON.widget.extras();
 
 		},
 
@@ -2092,7 +2151,21 @@ var SEMICOLON = SEMICOLON || {};
 	SEMICOLON.documentOnLoad = {
 
 		init: function(){
-
+			SEMICOLON.slider.captionPosition();
+			SEMICOLON.slider.swiperSliderMenu();
+			SEMICOLON.slider.revolutionSliderMenu();
+			SEMICOLON.initialize.maxHeight();
+			SEMICOLON.initialize.testimonialsGrid();
+			SEMICOLON.initialize.verticalMiddle();
+			SEMICOLON.initialize.stickFooterOnSmall();
+			SEMICOLON.portfolio.portfolioDescMargin();
+			SEMICOLON.portfolio.arrange();
+			SEMICOLON.widget.parallax();
+			SEMICOLON.widget.loadFlexSlider();
+			SEMICOLON.widget.html5Video();
+			SEMICOLON.widget.masonryThumbs();
+			SEMICOLON.slider.owlCaptionInit();
+			SEMICOLON.header.topsocial();
 		}
 
 	};

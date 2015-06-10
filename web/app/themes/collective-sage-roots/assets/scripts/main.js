@@ -8,6 +8,10 @@
  * .noConflict()
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
+ *
+ * Google CDN, Latest jQuery
+ * To use the default WordPress version of jQuery, go to lib/config.php and
+ * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
 (function($) {
@@ -75,11 +79,10 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-
   // Slick carousel init
   function initSlick() {
 
-    if($(".slider").length) {
+    if($(".slider .carousel-inner .item").length > 1) {
       $(".slider .carousel-inner").slick({
         dots: true,
         //dotsClass: 'carousel-indicators',
@@ -112,6 +115,5 @@
     }
 
   }
-
 
 })(jQuery); // Fully reference jQuery after this point.
