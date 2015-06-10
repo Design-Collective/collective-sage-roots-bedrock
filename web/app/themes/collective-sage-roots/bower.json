@@ -8,6 +8,7 @@
   "private": true,
   "dependencies": {
     "modernizr": "2.8.2",
+    "jquery": "1.11.2",
     "bootstrap": "3.3.4",
     "bootstrap-select": "silviomoreto/bootstrap-select#~1.6.3",
     "nicescroll": "~3.5.6",
