@@ -8,7 +8,7 @@ use Roots\Sage\Wrapper;
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <?php get_template_part('templates/head'); ?>
-  <body <?php body_class('stretched no-transtion'); ?>>
+  <body <?php body_class('stretched sticky-responsive-menu'); ?>>
     <div id="wrapper" class="clearfix">
       <!--[if lt IE 9]>
         <div class="alert alert-warning">
