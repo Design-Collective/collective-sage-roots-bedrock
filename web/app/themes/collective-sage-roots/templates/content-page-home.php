@@ -87,10 +87,10 @@
           
       </div>
       <div class="row">
-          <div class="col-md-3 col-md-push-3">
+          <div class="col-md-3 col-md-push-3 text-right">
             <a class="btn btn-primary btn-lg">Search Hotels</a>
           </div>
-          <div class="col-md-3 col-md-push-3">
+          <div class="col-md-3 col-md-push-3 text-left">
             <a class="btn btn-secondary btn-lg">Search Attractions</a>
           </div>
       </div>

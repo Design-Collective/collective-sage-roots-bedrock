@@ -52,7 +52,6 @@ function admin_login_redirect( $redirect_to, $request, $user )
 }
 add_filter("login_redirect", "admin_login_redirect", 10, 3);
 
-
 /* Remove styling from login page */
 
 add_action( 'login_init', function() {
@@ -61,3 +60,8 @@ add_action( 'login_init', function() {
     // wp_enqueue_style( 'custom-login', get_stylesheet_directory_uri() . '/assets/css/main.min.css' );
 } );
 
+// WooCommerce Filter
+// Woo Support Declaration
+
+add_filter('woocommerce_show_page_title', '__return_false');
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);

@@ -11,10 +11,10 @@
           ============================================= -->
 
           <div id="logo">
+              
+              <a class="standard-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
 
-              <a class="text-hide standard-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
-
-              <a class="text-hide retina-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
+              <a class="retina-logo" data-dark-logo="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo.png" href="<?= esc_url(home_url('/')); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/dist/images/logo_inverse.png" alt="Canvas Logo"></a>
           </div><!-- #logo end -->
 
           <!-- Primary Navigation

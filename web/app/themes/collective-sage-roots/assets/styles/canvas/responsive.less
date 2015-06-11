@@ -2218,11 +2218,7 @@
 	h5 {
 		margin: 10px 0 0 0;
 	}
-	&:before,
-	&:after {
-		display: none;
-	}
-
+	
 	.testimonials-grid {
 		li {
 			float: none;
@@ -2929,7 +2925,7 @@ only screen and (                min-resolution: 2dppx) {
 	.widget_pages,
 	.widget_rss,
 	.widget_recent_comments{
-		 li a {
+		li a {
 			background-image: url("../images/icons/widget-link@2x.png");
 			background-size: 4px 20px;
 		}
@@ -2953,31 +2949,29 @@ only screen and (                min-resolution: 2dppx) {
 		.widget_pages,
 		.widget_rss,
 		.widget_recent_comments {
-			 li a {
+			li a {
 			 	background-image: url("../images/icons/widget-link-dark@2x.png");
 			}
 		}
-
 	}
-
-	@media
-	only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 991px),
-	only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 991px),
-	only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 991px),
-	only screen and (        min-device-pixel-ratio: 2) and (max-width: 991px),
-	only screen and (                min-resolution: 192dpi) and (max-width: 991px),
-	only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
-		#logo {
-			a {
-				&.standard-logo {
-					display: none;
-				}
-				&.retina-logo {
-					display: inline-block;
-				}
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 991px),
+only screen and (   min--moz-device-pixel-ratio: 2) and (max-width: 991px),
+only screen and (     -o-min-device-pixel-ratio: 2/1) and (max-width: 991px),
+only screen and (        min-device-pixel-ratio: 2) and (max-width: 991px),
+only screen and (                min-resolution: 192dpi) and (max-width: 991px),
+only screen and (                min-resolution: 2dppx) and (max-width: 991px) {
+	#logo {
+		a {
+			&.standard-logo {
+				display: none;
+			}
+			&.retina-logo {
+				display: inline-block !important;
 			}
 		}
-
 	}
 
 }
+
