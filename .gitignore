@@ -11,6 +11,7 @@ web/app/uploads/*
 !web/app/mu-plugins/bedrock-autoloader.php
 
 
+
 # WordPress
 web/wp
 web/.htaccess
@@ -48,6 +49,7 @@ bin
 #!web/app/plugins/soil
 #!web/app/plugins/wp-clone-by-wp-academy
 #!web/app/plugins/wp-mail-smtp
+!web/app/plugins/woocommerce-pdf-product-vouchers
 
 #MU-Plugin Keep
 

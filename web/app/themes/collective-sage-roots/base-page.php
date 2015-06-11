@@ -8,7 +8,7 @@ use Roots\Sage\Wrapper;
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
   <?php get_template_part('templates/head'); ?>
-  <body <?php body_class('stretched no-transtion'); ?> data-loader="1">
+  <body <?php body_class('stretched no-transtion'); ?>>
     <div id="wrapper" class="clearfix">
       <!--[if lt IE 9]>
         <div class="alert alert-warning">
@@ -34,5 +34,6 @@ use Roots\Sage\Wrapper;
         wp_footer();
       ?>
     </div>
+    <div id="gotoTop" class="icon-angle-up"></div>
   </body>
 </html>

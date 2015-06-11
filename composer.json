@@ -53,7 +53,8 @@
     "wpackagist-plugin/safe-redirect-manager": "~1.7",
     "wpackagist-plugin/mailchimp-for-wp": "*",
     "wpackagist-plugin/wordpress-seo": "1.7.3.3",
-    "wpackagist-plugin/wp-mail-smtp": "0.9.*"
+    "wpackagist-plugin/wp-mail-smtp": "0.9.*",
+    "wpackagist-plugin/woocommerce": "^2.3"
   },
   "extra": {
     "installer-paths": {

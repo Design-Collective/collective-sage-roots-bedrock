@@ -56,7 +56,7 @@
                           <div class="top-cart-item clearfix">
 
                               <div class="top-cart-item-desc">
-                                  <a href="#">Blue Round-Neck Tshirt</a>
+                                  <a href="#">Voucher Test 1</a>
                                   <span class="top-cart-item-price">$19.99</span>
                                   <span class="top-cart-item-quantity">x 2</span>
                               </div>
@@ -64,7 +64,7 @@
                           <div class="top-cart-item clearfix">
 
                               <div class="top-cart-item-desc">
-                                  <a href="#">Light Blue Denim Dress</a>
+                                  <a href="#">Voucher Test 2</a>
                                   <span class="top-cart-item-price">$24.99</span>
                                   <span class="top-cart-item-quantity">x 3</span>
                               </div>

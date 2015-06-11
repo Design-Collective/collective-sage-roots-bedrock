@@ -14,7 +14,7 @@
  * remove or comment out: add_theme_support('jquery-cdn');
  * ======================================================================== */
 
-(function($) {
+ (function($) {
 
   // Use this variable to set up the common and page specific functions. If you
   // rename this variable, you will also need to rename the namespace below.
@@ -23,6 +23,7 @@
     'common': {
       init: function() {
         initSlick();
+        initValidations();
         // JavaScript to be fired on all pages
       },
       finalize: function() {
@@ -78,6 +79,23 @@
 
   // Load Events
   $(document).ready(UTIL.loadEvents);
+
+  function initValidations() {
+    $("#widget-subscribe-form").validate({
+      submitHandler: function(form) {
+        $(form).find('.input-group-addon').find('.icon-email2').removeClass('icon-email2').addClass('icon-line-loader icon-spin');
+        $(form).ajaxSubmit({
+          target: '#widget-subscribe-form-result',
+          success: function() {
+            $(form).find('.input-group-addon').find('.icon-line-loader').removeClass('icon-line-loader icon-spin').addClass('icon-email2');
+            $('#widget-subscribe-form').find('.form-control').val('');
+            $('#widget-subscribe-form-result').attr('data-notify-msg', $('#widget-subscribe-form-result').html()).html('');
+            SEMICOLON.widget.notifications($('#widget-subscribe-form-result'));
+          }
+        });
+      }
+    });
+  }
 
   // Slick carousel init
   function initSlick() {
