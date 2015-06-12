@@ -20,7 +20,7 @@ use Roots\Sage\Wrapper;
         get_template_part('templates/header');
       ?>
 
-      <div class="wrap" role="document">
+      <div class="wrap notoppadding" role="document">
         <div class="content">
           <main class="main" role="main">
             <?php include Wrapper\template_path(); ?>

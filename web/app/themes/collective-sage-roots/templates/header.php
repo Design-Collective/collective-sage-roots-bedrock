@@ -1,5 +1,4 @@
-
-<header id="header" class="transparent-header full-header dark" data-sticky-class="not-dark">
+<header id="header" class="<?php echo (is_page('Home') ? "transparent-header dark" : 'not-dark' );?> " data-sticky-class="not-dark">
 
   <div id="header-wrap" class="">
 
