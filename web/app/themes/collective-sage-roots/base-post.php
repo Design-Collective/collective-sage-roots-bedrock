@@ -19,17 +19,26 @@ use Roots\Sage\Wrapper;
         do_action('get_header');
         get_template_part('templates/header');
       ?>
-      <div class="wrap container notoppadding" role="document">
+      <div class="wrap notoppadding" role="document">
+        <?php if (Config\display_sidebar()) : ?>
+          <div class="container">
+        <?php endif; ?>
         <div class="content row">
+          <!-- Content -->
           <main class="main" role="main">
             <?php include Wrapper\template_path(); ?>
           </main><!-- /.main -->
+          <!-- Aside -->
           <?php if (Config\display_sidebar()) : ?>
-            <aside class="sidebar" role="complementary">
+            <aside class="sidebar col_last" role="complementary">
               <?php include Wrapper\sidebar_path(); ?>
             </aside><!-- /.sidebar -->
           <?php endif; ?>
+          
         </div><!-- /.content -->
+        <?php if (Config\display_sidebar()) : ?>
+          </div>
+        <?php endif; ?>
       </div><!-- /.wrap -->
       <?php
         do_action('get_footer');
